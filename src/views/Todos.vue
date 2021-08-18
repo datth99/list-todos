@@ -1,6 +1,5 @@
 <template>
 <div>
-   
     <div class="todo-list" v-if="auth.isAuth">
       <TodoForm />
       <ul>
@@ -42,10 +41,7 @@ export default {
         markTodoCompleted(todoId){
             return this.$store.commit('MARK_COMPLETE', todoId) // chuyen doi trang thai isAuth
         },
-        // ...mapMutations(['MARK_COMPLETE']),
-        // deleteTodos(todoId){
-        //     this.$store.dispatch('deleteTodo', todoId) // goi toi action deleteTodo
-        // }
+       
     }
 }
 </script>

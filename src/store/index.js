@@ -13,6 +13,9 @@ export default new Vuex.Store({
             isAuth: false
         }
     },
+    getters: {
+        doneTodos: state => state.todos.filter(todo => todo.completed)
+    },
     mutations: {
         TOGGE_AUTH(state) {
             state.auth.isAuth = !state.auth.isAuth

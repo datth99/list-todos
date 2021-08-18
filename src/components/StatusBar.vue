@@ -1,8 +1,8 @@
 <template>
   <div class="list-todos">
       <ul>
-          <li><b>DONE</b></li>
-          <li class="status-bar" v-for="todo in doneTodos" :key="todo.id">{{todo.title}}</li>
+          <li style="background-color: white"><b>DONE</b></li>
+          <li style="background-color: red; color: yellow;" class="status-bar" v-for="todo in doneTodos" :key="todo.id">{{todo.title}}</li>
       </ul>
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
     name: 'StatusBar',
     computed: {
         doneTodos(){
-            return this.$store.state.todos.filter(todo => todo.completed) // loc ra trang thai todo DONE!
+            return this.$store.getters.doneTodos;
         }
     }
 }

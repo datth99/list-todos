@@ -9,7 +9,7 @@ export default {
   name: 'ProcessBar',
   computed: {
       proccess(){
-          return Math.round(this.$store.state.todos.filter(todo => todo.completed).length / this.$store.state.todos.length * 100)
+          return Math.round(this.$store.getters.doneTodos.length / this.$store.state.todos.length * 100)
       }
   }
 }
